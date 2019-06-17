@@ -16,8 +16,8 @@ Insert the following text and edit it accordingly:
 C:/PathToImageJ/imagej-win64.exe --ij2 --run C:/PathToScript/merlin_mib_to_tif.ijm
 ```
 
-rename the file to e.g. `Merlin mib To tif Converter.bat` and follow [https://superuser.com/questions/868340/how-can-i-convert-a-windows-batch-script-to-a-exe](this Stackoverflow post) to make it executable, if it isn't
+rename the file to e.g. `Merlin mib To tif Converter.bat` and follow [this Stackoverflow post](https://superuser.com/questions/868340/how-can-i-convert-a-windows-batch-script-to-a-exe) to make it executable, if it isn't
 straight off the `.bat`.
 
 # License
-[./LICENSE](MIT license)
+[MIT license](./LICENSE)
