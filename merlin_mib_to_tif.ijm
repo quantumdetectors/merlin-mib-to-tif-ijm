@@ -1,7 +1,5 @@
-div = "\\"
-
 path_to_mib = getDirectory("Choose path");
-path_to_tiff = path_to_mib+"tiff_files"+div;
+path_to_tiff = path_to_mib+"tiff_files"+File.separator;
 list = getFileList(path_to_mib);
 Dialog.create("Merlin .mib to .tif converter");
 Dialog.addString("Path to .mib files:", path_to_mib,70);
@@ -10,7 +8,8 @@ bit_depths = newArray("1-bit","6-bit","12-bit","24-bit");
 Dialog.addChoice("Bits:", bit_depths,bit_depths[2]);
 Dialog.addCheckbox("Raw mode", false);
 Dialog.addMessage("Tool for converting .mib files to .tif files.");
-Dialog.addMessage("Quantum Detectors © 2019");
+getDateAndTime(year, month, dayOfWeek, dayOfMonth, hour, minute, second, msec);
+Dialog.addMessage("Copyright Quantum Detectors " + year);
 Dialog.show()
 path_to_mib = Dialog.getString();
 path_to_tiff = Dialog.getString();
@@ -23,7 +22,7 @@ if (!raw){
 	if (bit_mode == "24-bit") bit_mode = "32-bit";
 }
 if (!File.exists(path_to_tiff)){
-    File.makeDirectory(path_to_tiff); 
+    File.makeDirectory(path_to_tiff);
 }
 
 setBatchMode(true);
@@ -37,4 +36,3 @@ for(i=0;i<l;i++){
     }
 }
 run("Close All");
-
